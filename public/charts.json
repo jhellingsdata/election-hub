@@ -1,0 +1,30 @@
+[
+    {
+        "id": "chart1",
+        "title": "Economic Growth",
+        "tags": ["immigration"],
+        "tags-eco": ["economics", "growth"],
+        "file": "/charts/C1_foreign-born-population_OECD.json"
+    },
+    {
+        "id": "chart2",
+        "title": "Inflation Rates",
+        "tags": ["immigration"],
+        "tags-eco": ["economics", "inflation"],
+        "file": "/charts/C2_foreign-born-population_historical_OECD.json"
+    },
+    {
+        "id": "chart3",
+        "title": "Inflation Rates",
+        "tags": ["immigration"],
+        "tags-eco": ["economics", "inflation"],
+        "file": "/charts/C3_long-term-migration.json"
+    },
+    {
+        "id": "chart4",
+        "title": "Inflation Rates",
+        "tags": ["immigration"],
+        "tags-eco": ["economics", "inflation"],
+        "file": "/charts/C4_non-eu-immigration.json"
+    }
+  ]

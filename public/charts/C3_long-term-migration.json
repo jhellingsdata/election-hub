@@ -1,0 +1,1148 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "area": {
+      "opacity": 0.3
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.7,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#676A86",
+      "subtitleColor": "#122b39E6",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "dx": 24,
+      "fontSize": 14,
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 0
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-a0a55d106695e8d630baff0f16eee66d"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "dimgrey",
+        "opacity": 0.8,
+        "size": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-51ba004b3420b432a4e3d506cc3ebfa3"
+      },
+      "mark": {
+        "type": "line"
+      },
+      "encoding": {
+        "color": {
+          "field": "Measure",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#f4c245",
+              "#179fdb",
+              "#122b39"
+            ]
+          },
+          "type": "nominal"
+        },
+        "opacity": {
+          "condition": {
+            "test": "(datum.Measure === 'Net migration')",
+            "value": 1
+          },
+          "value": 0.5
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "(datum.Measure === 'Net migration')",
+            "value": 3
+          },
+          "value": 2
+        },
+        "x": {
+          "field": "Year",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative"
+        }
+      },
+      "title": {
+        "text": "Long-term migration in the UK",
+        "dx": 0,
+        "frame": "group",
+        "subtitle": [
+          "Source: House of Commons & ONS, via Statista"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-51ba004b3420b432a4e3d506cc3ebfa3"
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12
+      },
+      "encoding": {
+        "color": {
+          "field": "Measure",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#f4c245",
+              "#179fdb",
+              "#122b39"
+            ]
+          },
+          "type": "nominal"
+        },
+        "text": {
+          "field": "Measure",
+          "type": "nominal"
+        },
+        "x": {
+          "aggregate": "max",
+          "field": "Year",
+          "type": "temporal"
+        },
+        "y": {
+          "aggregate": {
+            "argmax": "Year"
+          },
+          "field": "Value",
+          "type": "quantitative"
+        }
+      },
+      "title": {
+        "text": "Long-term migration in the UK",
+        "dx": 0,
+        "frame": "group",
+        "subtitle": [
+          "Source: House of Commons & ONS, via Statista"
+        ]
+      }
+    }
+  ],
+  "width": 450,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-a0a55d106695e8d630baff0f16eee66d": [
+      {
+        "y": 0
+      }
+    ],
+    "data-51ba004b3420b432a4e3d506cc3ebfa3": [
+      {
+        "Year": "1964-01-01",
+        "Measure": "Immigration",
+        "Value": 211000
+      },
+      {
+        "Year": "1965-01-01",
+        "Measure": "Immigration",
+        "Value": 206000
+      },
+      {
+        "Year": "1966-01-01",
+        "Measure": "Immigration",
+        "Value": 219000
+      },
+      {
+        "Year": "1967-01-01",
+        "Measure": "Immigration",
+        "Value": 225000
+      },
+      {
+        "Year": "1968-01-01",
+        "Measure": "Immigration",
+        "Value": 222000
+      },
+      {
+        "Year": "1969-01-01",
+        "Measure": "Immigration",
+        "Value": 206000
+      },
+      {
+        "Year": "1970-01-01",
+        "Measure": "Immigration",
+        "Value": 226000
+      },
+      {
+        "Year": "1971-01-01",
+        "Measure": "Immigration",
+        "Value": 200000
+      },
+      {
+        "Year": "1972-01-01",
+        "Measure": "Immigration",
+        "Value": 222000
+      },
+      {
+        "Year": "1973-01-01",
+        "Measure": "Immigration",
+        "Value": 196000
+      },
+      {
+        "Year": "1974-01-01",
+        "Measure": "Immigration",
+        "Value": 184000
+      },
+      {
+        "Year": "1975-01-01",
+        "Measure": "Immigration",
+        "Value": 197000
+      },
+      {
+        "Year": "1976-01-01",
+        "Measure": "Immigration",
+        "Value": 191000
+      },
+      {
+        "Year": "1977-01-01",
+        "Measure": "Immigration",
+        "Value": 162000
+      },
+      {
+        "Year": "1978-01-01",
+        "Measure": "Immigration",
+        "Value": 187000
+      },
+      {
+        "Year": "1979-01-01",
+        "Measure": "Immigration",
+        "Value": 195000
+      },
+      {
+        "Year": "1980-01-01",
+        "Measure": "Immigration",
+        "Value": 173000
+      },
+      {
+        "Year": "1981-01-01",
+        "Measure": "Immigration",
+        "Value": 153000
+      },
+      {
+        "Year": "1982-01-01",
+        "Measure": "Immigration",
+        "Value": 201000
+      },
+      {
+        "Year": "1983-01-01",
+        "Measure": "Immigration",
+        "Value": 202000
+      },
+      {
+        "Year": "1984-01-01",
+        "Measure": "Immigration",
+        "Value": 201000
+      },
+      {
+        "Year": "1985-01-01",
+        "Measure": "Immigration",
+        "Value": 232000
+      },
+      {
+        "Year": "1986-01-01",
+        "Measure": "Immigration",
+        "Value": 250000
+      },
+      {
+        "Year": "1987-01-01",
+        "Measure": "Immigration",
+        "Value": 211000
+      },
+      {
+        "Year": "1988-01-01",
+        "Measure": "Immigration",
+        "Value": 216000
+      },
+      {
+        "Year": "1989-01-01",
+        "Measure": "Immigration",
+        "Value": 250000
+      },
+      {
+        "Year": "1990-01-01",
+        "Measure": "Immigration",
+        "Value": 267000
+      },
+      {
+        "Year": "1991-01-01",
+        "Measure": "Immigration",
+        "Value": 329000
+      },
+      {
+        "Year": "1992-01-01",
+        "Measure": "Immigration",
+        "Value": 268000
+      },
+      {
+        "Year": "1993-01-01",
+        "Measure": "Immigration",
+        "Value": 266000
+      },
+      {
+        "Year": "1994-01-01",
+        "Measure": "Immigration",
+        "Value": 315000
+      },
+      {
+        "Year": "1995-01-01",
+        "Measure": "Immigration",
+        "Value": 312000
+      },
+      {
+        "Year": "1996-01-01",
+        "Measure": "Immigration",
+        "Value": 318000
+      },
+      {
+        "Year": "1997-01-01",
+        "Measure": "Immigration",
+        "Value": 327000
+      },
+      {
+        "Year": "1998-01-01",
+        "Measure": "Immigration",
+        "Value": 391000
+      },
+      {
+        "Year": "1999-01-01",
+        "Measure": "Immigration",
+        "Value": 454000
+      },
+      {
+        "Year": "2000-01-01",
+        "Measure": "Immigration",
+        "Value": 479000
+      },
+      {
+        "Year": "2001-01-01",
+        "Measure": "Immigration",
+        "Value": 481000
+      },
+      {
+        "Year": "2002-01-01",
+        "Measure": "Immigration",
+        "Value": 516000
+      },
+      {
+        "Year": "2003-01-01",
+        "Measure": "Immigration",
+        "Value": 511000
+      },
+      {
+        "Year": "2004-01-01",
+        "Measure": "Immigration",
+        "Value": 589000
+      },
+      {
+        "Year": "2005-01-01",
+        "Measure": "Immigration",
+        "Value": 567000
+      },
+      {
+        "Year": "2006-01-01",
+        "Measure": "Immigration",
+        "Value": 596000
+      },
+      {
+        "Year": "2007-01-01",
+        "Measure": "Immigration",
+        "Value": 574000
+      },
+      {
+        "Year": "2008-01-01",
+        "Measure": "Immigration",
+        "Value": 590000
+      },
+      {
+        "Year": "2009-01-01",
+        "Measure": "Immigration",
+        "Value": 591000
+      },
+      {
+        "Year": "2010-01-01",
+        "Measure": "Immigration",
+        "Value": 604000
+      },
+      {
+        "Year": "2011-01-01",
+        "Measure": "Immigration",
+        "Value": 599000
+      },
+      {
+        "Year": "2012-01-01",
+        "Measure": "Immigration",
+        "Value": 524000
+      },
+      {
+        "Year": "2013-01-01",
+        "Measure": "Immigration",
+        "Value": 557000
+      },
+      {
+        "Year": "2014-01-01",
+        "Measure": "Immigration",
+        "Value": 667000
+      },
+      {
+        "Year": "2015-01-01",
+        "Measure": "Immigration",
+        "Value": 664000
+      },
+      {
+        "Year": "2016-01-01",
+        "Measure": "Immigration",
+        "Value": 622000
+      },
+      {
+        "Year": "2017-01-01",
+        "Measure": "Immigration",
+        "Value": 644000
+      },
+      {
+        "Year": "2018-01-01",
+        "Measure": "Immigration",
+        "Value": 825000
+      },
+      {
+        "Year": "2019-01-01",
+        "Measure": "Immigration",
+        "Value": 788000
+      },
+      {
+        "Year": "2020-01-01",
+        "Measure": "Immigration",
+        "Value": 662000
+      },
+      {
+        "Year": "2021-01-01",
+        "Measure": "Immigration",
+        "Value": 891000
+      },
+      {
+        "Year": "2022-01-01",
+        "Measure": "Immigration",
+        "Value": 1257000
+      },
+      {
+        "Year": "2023-01-01",
+        "Measure": "Immigration",
+        "Value": 1218000
+      },
+      {
+        "Year": "1964-01-01",
+        "Measure": "Emigration",
+        "Value": 271000
+      },
+      {
+        "Year": "1965-01-01",
+        "Measure": "Emigration",
+        "Value": 284000
+      },
+      {
+        "Year": "1966-01-01",
+        "Measure": "Emigration",
+        "Value": 302000
+      },
+      {
+        "Year": "1967-01-01",
+        "Measure": "Emigration",
+        "Value": 309000
+      },
+      {
+        "Year": "1968-01-01",
+        "Measure": "Emigration",
+        "Value": 278000
+      },
+      {
+        "Year": "1969-01-01",
+        "Measure": "Emigration",
+        "Value": 293000
+      },
+      {
+        "Year": "1970-01-01",
+        "Measure": "Emigration",
+        "Value": 291000
+      },
+      {
+        "Year": "1971-01-01",
+        "Measure": "Emigration",
+        "Value": 240000
+      },
+      {
+        "Year": "1972-01-01",
+        "Measure": "Emigration",
+        "Value": 233000
+      },
+      {
+        "Year": "1973-01-01",
+        "Measure": "Emigration",
+        "Value": 246000
+      },
+      {
+        "Year": "1974-01-01",
+        "Measure": "Emigration",
+        "Value": 269000
+      },
+      {
+        "Year": "1975-01-01",
+        "Measure": "Emigration",
+        "Value": 238000
+      },
+      {
+        "Year": "1976-01-01",
+        "Measure": "Emigration",
+        "Value": 210000
+      },
+      {
+        "Year": "1977-01-01",
+        "Measure": "Emigration",
+        "Value": 208000
+      },
+      {
+        "Year": "1978-01-01",
+        "Measure": "Emigration",
+        "Value": 192000
+      },
+      {
+        "Year": "1979-01-01",
+        "Measure": "Emigration",
+        "Value": 189000
+      },
+      {
+        "Year": "1980-01-01",
+        "Measure": "Emigration",
+        "Value": 228000
+      },
+      {
+        "Year": "1981-01-01",
+        "Measure": "Emigration",
+        "Value": 232000
+      },
+      {
+        "Year": "1982-01-01",
+        "Measure": "Emigration",
+        "Value": 257000
+      },
+      {
+        "Year": "1983-01-01",
+        "Measure": "Emigration",
+        "Value": 184000
+      },
+      {
+        "Year": "1984-01-01",
+        "Measure": "Emigration",
+        "Value": 164000
+      },
+      {
+        "Year": "1985-01-01",
+        "Measure": "Emigration",
+        "Value": 174000
+      },
+      {
+        "Year": "1986-01-01",
+        "Measure": "Emigration",
+        "Value": 213000
+      },
+      {
+        "Year": "1987-01-01",
+        "Measure": "Emigration",
+        "Value": 209000
+      },
+      {
+        "Year": "1988-01-01",
+        "Measure": "Emigration",
+        "Value": 237000
+      },
+      {
+        "Year": "1989-01-01",
+        "Measure": "Emigration",
+        "Value": 205000
+      },
+      {
+        "Year": "1990-01-01",
+        "Measure": "Emigration",
+        "Value": 231000
+      },
+      {
+        "Year": "1991-01-01",
+        "Measure": "Emigration",
+        "Value": 285000
+      },
+      {
+        "Year": "1992-01-01",
+        "Measure": "Emigration",
+        "Value": 281000
+      },
+      {
+        "Year": "1993-01-01",
+        "Measure": "Emigration",
+        "Value": 266000
+      },
+      {
+        "Year": "1994-01-01",
+        "Measure": "Emigration",
+        "Value": 238000
+      },
+      {
+        "Year": "1995-01-01",
+        "Measure": "Emigration",
+        "Value": 236000
+      },
+      {
+        "Year": "1996-01-01",
+        "Measure": "Emigration",
+        "Value": 264000
+      },
+      {
+        "Year": "1997-01-01",
+        "Measure": "Emigration",
+        "Value": 279000
+      },
+      {
+        "Year": "1998-01-01",
+        "Measure": "Emigration",
+        "Value": 251000
+      },
+      {
+        "Year": "1999-01-01",
+        "Measure": "Emigration",
+        "Value": 291000
+      },
+      {
+        "Year": "2000-01-01",
+        "Measure": "Emigration",
+        "Value": 321000
+      },
+      {
+        "Year": "2001-01-01",
+        "Measure": "Emigration",
+        "Value": 309000
+      },
+      {
+        "Year": "2002-01-01",
+        "Measure": "Emigration",
+        "Value": 363000
+      },
+      {
+        "Year": "2003-01-01",
+        "Measure": "Emigration",
+        "Value": 363000
+      },
+      {
+        "Year": "2004-01-01",
+        "Measure": "Emigration",
+        "Value": 344000
+      },
+      {
+        "Year": "2005-01-01",
+        "Measure": "Emigration",
+        "Value": 361000
+      },
+      {
+        "Year": "2006-01-01",
+        "Measure": "Emigration",
+        "Value": 398000
+      },
+      {
+        "Year": "2007-01-01",
+        "Measure": "Emigration",
+        "Value": 341000
+      },
+      {
+        "Year": "2008-01-01",
+        "Measure": "Emigration",
+        "Value": 427000
+      },
+      {
+        "Year": "2009-01-01",
+        "Measure": "Emigration",
+        "Value": 368000
+      },
+      {
+        "Year": "2010-01-01",
+        "Measure": "Emigration",
+        "Value": 339000
+      },
+      {
+        "Year": "2011-01-01",
+        "Measure": "Emigration",
+        "Value": 351000
+      },
+      {
+        "Year": "2012-01-01",
+        "Measure": "Emigration",
+        "Value": 363000
+      },
+      {
+        "Year": "2013-01-01",
+        "Measure": "Emigration",
+        "Value": 350000
+      },
+      {
+        "Year": "2014-01-01",
+        "Measure": "Emigration",
+        "Value": 358000
+      },
+      {
+        "Year": "2015-01-01",
+        "Measure": "Emigration",
+        "Value": 334000
+      },
+      {
+        "Year": "2016-01-01",
+        "Measure": "Emigration",
+        "Value": 369000
+      },
+      {
+        "Year": "2017-01-01",
+        "Measure": "Emigration",
+        "Value": 395000
+      },
+      {
+        "Year": "2018-01-01",
+        "Measure": "Emigration",
+        "Value": 549000
+      },
+      {
+        "Year": "2019-01-01",
+        "Measure": "Emigration",
+        "Value": 605000
+      },
+      {
+        "Year": "2020-01-01",
+        "Measure": "Emigration",
+        "Value": 569000
+      },
+      {
+        "Year": "2021-01-01",
+        "Measure": "Emigration",
+        "Value": 424000
+      },
+      {
+        "Year": "2022-01-01",
+        "Measure": "Emigration",
+        "Value": 493000
+      },
+      {
+        "Year": "2023-01-01",
+        "Measure": "Emigration",
+        "Value": 532000
+      },
+      {
+        "Year": "1964-01-01",
+        "Measure": "Net migration",
+        "Value": -60000
+      },
+      {
+        "Year": "1965-01-01",
+        "Measure": "Net migration",
+        "Value": -78000
+      },
+      {
+        "Year": "1966-01-01",
+        "Measure": "Net migration",
+        "Value": -82000
+      },
+      {
+        "Year": "1967-01-01",
+        "Measure": "Net migration",
+        "Value": -84000
+      },
+      {
+        "Year": "1968-01-01",
+        "Measure": "Net migration",
+        "Value": -56000
+      },
+      {
+        "Year": "1969-01-01",
+        "Measure": "Net migration",
+        "Value": -87000
+      },
+      {
+        "Year": "1970-01-01",
+        "Measure": "Net migration",
+        "Value": -65000
+      },
+      {
+        "Year": "1971-01-01",
+        "Measure": "Net migration",
+        "Value": -40000
+      },
+      {
+        "Year": "1972-01-01",
+        "Measure": "Net migration",
+        "Value": -11000
+      },
+      {
+        "Year": "1973-01-01",
+        "Measure": "Net migration",
+        "Value": -50000
+      },
+      {
+        "Year": "1974-01-01",
+        "Measure": "Net migration",
+        "Value": -85000
+      },
+      {
+        "Year": "1975-01-01",
+        "Measure": "Net migration",
+        "Value": -41000
+      },
+      {
+        "Year": "1976-01-01",
+        "Measure": "Net migration",
+        "Value": -19000
+      },
+      {
+        "Year": "1977-01-01",
+        "Measure": "Net migration",
+        "Value": -46000
+      },
+      {
+        "Year": "1978-01-01",
+        "Measure": "Net migration",
+        "Value": -5000
+      },
+      {
+        "Year": "1979-01-01",
+        "Measure": "Net migration",
+        "Value": 6000
+      },
+      {
+        "Year": "1980-01-01",
+        "Measure": "Net migration",
+        "Value": -55000
+      },
+      {
+        "Year": "1981-01-01",
+        "Measure": "Net migration",
+        "Value": -79000
+      },
+      {
+        "Year": "1982-01-01",
+        "Measure": "Net migration",
+        "Value": -56000
+      },
+      {
+        "Year": "1983-01-01",
+        "Measure": "Net migration",
+        "Value": 17000
+      },
+      {
+        "Year": "1984-01-01",
+        "Measure": "Net migration",
+        "Value": 37000
+      },
+      {
+        "Year": "1985-01-01",
+        "Measure": "Net migration",
+        "Value": 58000
+      },
+      {
+        "Year": "1986-01-01",
+        "Measure": "Net migration",
+        "Value": 37000
+      },
+      {
+        "Year": "1987-01-01",
+        "Measure": "Net migration",
+        "Value": 2000
+      },
+      {
+        "Year": "1988-01-01",
+        "Measure": "Net migration",
+        "Value": -21000
+      },
+      {
+        "Year": "1989-01-01",
+        "Measure": "Net migration",
+        "Value": 44000
+      },
+      {
+        "Year": "1990-01-01",
+        "Measure": "Net migration",
+        "Value": 36000
+      },
+      {
+        "Year": "1991-01-01",
+        "Measure": "Net migration",
+        "Value": 44000
+      },
+      {
+        "Year": "1992-01-01",
+        "Measure": "Net migration",
+        "Value": -13000
+      },
+      {
+        "Year": "1993-01-01",
+        "Measure": "Net migration",
+        "Value": -1000
+      },
+      {
+        "Year": "1994-01-01",
+        "Measure": "Net migration",
+        "Value": 77000
+      },
+      {
+        "Year": "1995-01-01",
+        "Measure": "Net migration",
+        "Value": 76000
+      },
+      {
+        "Year": "1996-01-01",
+        "Measure": "Net migration",
+        "Value": 55000
+      },
+      {
+        "Year": "1997-01-01",
+        "Measure": "Net migration",
+        "Value": 48000
+      },
+      {
+        "Year": "1998-01-01",
+        "Measure": "Net migration",
+        "Value": 140000
+      },
+      {
+        "Year": "1999-01-01",
+        "Measure": "Net migration",
+        "Value": 163000
+      },
+      {
+        "Year": "2000-01-01",
+        "Measure": "Net migration",
+        "Value": 158000
+      },
+      {
+        "Year": "2001-01-01",
+        "Measure": "Net migration",
+        "Value": 171000
+      },
+      {
+        "Year": "2002-01-01",
+        "Measure": "Net migration",
+        "Value": 153000
+      },
+      {
+        "Year": "2003-01-01",
+        "Measure": "Net migration",
+        "Value": 148000
+      },
+      {
+        "Year": "2004-01-01",
+        "Measure": "Net migration",
+        "Value": 245000
+      },
+      {
+        "Year": "2005-01-01",
+        "Measure": "Net migration",
+        "Value": 206000
+      },
+      {
+        "Year": "2006-01-01",
+        "Measure": "Net migration",
+        "Value": 198000
+      },
+      {
+        "Year": "2007-01-01",
+        "Measure": "Net migration",
+        "Value": 233000
+      },
+      {
+        "Year": "2008-01-01",
+        "Measure": "Net migration",
+        "Value": 163000
+      },
+      {
+        "Year": "2009-01-01",
+        "Measure": "Net migration",
+        "Value": 229000
+      },
+      {
+        "Year": "2010-01-01",
+        "Measure": "Net migration",
+        "Value": 256000
+      },
+      {
+        "Year": "2011-01-01",
+        "Measure": "Net migration",
+        "Value": 249000
+      },
+      {
+        "Year": "2012-01-01",
+        "Measure": "Net migration",
+        "Value": 161000
+      },
+      {
+        "Year": "2013-01-01",
+        "Measure": "Net migration",
+        "Value": 208000
+      },
+      {
+        "Year": "2014-01-01",
+        "Measure": "Net migration",
+        "Value": 309000
+      },
+      {
+        "Year": "2015-01-01",
+        "Measure": "Net migration",
+        "Value": 329000
+      },
+      {
+        "Year": "2016-01-01",
+        "Measure": "Net migration",
+        "Value": 252000
+      },
+      {
+        "Year": "2017-01-01",
+        "Measure": "Net migration",
+        "Value": 249000
+      },
+      {
+        "Year": "2018-01-01",
+        "Measure": "Net migration",
+        "Value": 276000
+      },
+      {
+        "Year": "2019-01-01",
+        "Measure": "Net migration",
+        "Value": 184000
+      },
+      {
+        "Year": "2020-01-01",
+        "Measure": "Net migration",
+        "Value": 93000
+      },
+      {
+        "Year": "2021-01-01",
+        "Measure": "Net migration",
+        "Value": 466000
+      },
+      {
+        "Year": "2022-01-01",
+        "Measure": "Net migration",
+        "Value": 764000
+      },
+      {
+        "Year": "2023-01-01",
+        "Measure": "Net migration",
+        "Value": 685000
+      }
+    ]
+  },
+  "height": 300
+}
