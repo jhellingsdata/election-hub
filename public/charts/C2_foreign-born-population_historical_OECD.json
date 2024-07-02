@@ -115,6 +115,12 @@
       "labelFontSize": 11
     }
   },
+  "title": {
+    "text": "Foreign-born population in OECD countries",
+    "subtitle": [
+      "% share of total population, 2022 (or latest available). Source: OECD"
+    ]
+  },
   "layer": [
     {
       "mark": {
@@ -130,10 +136,17 @@
           "title": "Country",
           "type": "nominal"
         },
+        "opacity": {
+          "condition": {
+            "test": "(datum.Country === 'UK')",
+            "value": 1
+          },
+          "value": 0.7
+        },
         "size": {
           "condition": {
-            "test": "(datum.Country === 'United Kingdom')",
-            "value": 3
+            "test": "(datum.Country === 'UK')",
+            "value": 3.5
           },
           "value": 2
         },
@@ -149,18 +162,12 @@
           "type": "quantitative"
         }
       },
-      "title": {
-        "text": "Foreign-born population in OECD countries",
-        "subtitle": [
-          "% share of total population. Source: OECD"
-        ]
-      },
       "transform": [
         {
           "filter": {
             "field": "Country",
             "oneOf": [
-              "United Kingdom",
+              "UK",
               "United States",
               "Germany",
               "France",
@@ -208,18 +215,12 @@
           "type": "quantitative"
         }
       },
-      "title": {
-        "text": "Foreign-born population in OECD countries",
-        "subtitle": [
-          "% share of total population. Source: OECD"
-        ]
-      },
       "transform": [
         {
           "filter": {
             "field": "Country",
             "oneOf": [
-              "United Kingdom",
+              "UK",
               "United States",
               "Germany",
               "France",
@@ -234,11 +235,11 @@
     }
   ],
   "data": {
-    "name": "data-b2b25f42aca5e2f3dc495d566d2d671f"
+    "name": "data-5a062a58147ce1f2af4f8ec231e355d1"
   },
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "datasets": {
-    "data-b2b25f42aca5e2f3dc495d566d2d671f": [
+    "data-5a062a58147ce1f2af4f8ec231e355d1": [
       {
         "Country": "Australia",
         "Year": 2012,
@@ -1925,52 +1926,52 @@
         "Value": 0.03853578187380548
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2012,
         "Value": 0.11990175577538775
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2013,
         "Value": 0.12338115216333781
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2014,
         "Value": 0.12579233650747873
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2015,
         "Value": 0.13130691153016488
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2016,
         "Value": 0.1380432392340634
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2017,
         "Value": 0.14271557843892826
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2018,
         "Value": 0.14215577598920803
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2019,
         "Value": 0.14272479116978784
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2020,
         "Value": 0.1428062272497546
       },
       {
-        "Country": "United Kingdom",
+        "Country": "UK",
         "Year": 2021,
         "Value": 0.1433187707906506
       },

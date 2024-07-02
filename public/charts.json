@@ -1,21 +1,24 @@
 [
     {
         "id": "chart1",
-        "title": "Economic Growth",
+        "title": "Foreign-born population in OECD countries",
+        "subtitle": [""],
         "tags": ["immigration"],
         "tags-eco": ["Jobs, work, pay & benefits"],
         "file": "/charts/C1_foreign-born-population_OECD.json"
     },
     {
         "id": "chart2",
-        "title": "Inflation Rates",
+        "title": "Foreign-born population in OECD countries",
+        "subtitle": [""],
         "tags": ["immigration"],
         "tags-eco": ["economics", "inflation"],
         "file": "/charts/C2_foreign-born-population_historical_OECD.json"
     },
     {
         "id": "chart3",
-        "title": "Inflation Rates",
+        "title": "Long-term migration in the UK",
+        "subtitle": ["Annual population change, 1964-2023", "Source: ONS"],
         "tags": ["immigration"],
         "tags-eco": ["economics", "inflation"],
         "file": "/charts/C3_long-term-migration.json"
@@ -23,6 +26,7 @@
     {
         "id": "chart4",
         "title": "Inflation Rates",
+        "subtitle": [""],
         "tags": ["immigration"],
         "tags-eco": ["economics", "inflation"],
         "file": "/charts/C4_non-eu-immigration.json"
@@ -30,6 +34,7 @@
     {
         "id": "chart5",
         "title": "Graduate Salary Premium",
+        "subtitle": [""],
         "tags": ["education"],
         "tags-eco": ["Schools, universities & training", "Jobs, work, pay & benefits"],
         "file": "/charts/C3_graduate-salary-premiums.json"
@@ -37,6 +42,7 @@
     {
         "id": "chart6",
         "title": "Planning Application Decisions",
+        "subtitle": [""],
         "tags": ["housing"],
         "tags-eco": [],
         "file": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/Chart%20Packs/Planning/decisions_granted_time.json"
@@ -44,6 +50,7 @@
     {
         "id": "chart7",
         "title": "Housebuilding, England and Wales",
+        "subtitle": [""],
         "tags": ["housing"],
         "tags-eco": [],
         "file": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/Chart%20Packs/Housing/england_wales.json"
@@ -51,6 +58,7 @@
     {
         "id": "chart8",
         "title": "Total jobs linked to oil & gas, Scotland vs UK",
+        "subtitle": [""],
         "tags": ["energy"],
         "tags-eco": ["Jobs, work, pay & benefits"],
         "file": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/Chart%20Packs/Newsletters/newsletter_5/scotland/C2_energy_jobs.json"

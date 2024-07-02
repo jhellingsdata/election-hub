@@ -5,7 +5,7 @@
    * The `chart` prop contains the information about the chart to render, including its title and file path.
    * 
    * The `renderChart` function handles the chart rendering. It first checks if there's an existing chart view and 
-   * finalizes it to clean up the old chart before rendering the new one. This ensures that the chart updates correctly 
+   * finalises it to clean up the old chart before rendering the new one. This ensures that the chart updates correctly 
    * whenever the `chart` prop changes.
    * 
    * The `onMount` lifecycle hook runs `renderChart` when the component is first mounted.
@@ -48,7 +48,7 @@
 </script>
 
 <div class="chart-item">
-  <h3>{chart.title}</h3>
+  <!-- <h3>{chart.title}</h3> -->
   <div bind:this={chartElement} class="chart-container"></div>
 </div>
 

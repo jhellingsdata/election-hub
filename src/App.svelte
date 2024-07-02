@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { flip } from 'svelte/animate';
+  import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
   import TagList from './components/TagList.svelte';
-  import ChartList from './components/ChartList.svelte';
+  import Grid from './components/Grid.svelte';
+  import ChartItem from './components/ChartItem.svelte';
 
   type Chart = {
     id: string;
@@ -21,7 +24,9 @@
       const data: Chart[] = await res.json();
       console.log('Fetched charts:', data);  // Debugging
       charts = data;
-      tags = [...new Set(data.flatMap(chart => chart.tags))];
+      // tags = [...new Set(data.flatMap(chart => chart.tags))];
+      const chartTags = [...new Set(data.flatMap(chart => chart.tags))];
+      tags = [...tags, ...chartTags].filter((v, i, a) => a.indexOf(v) === i); // Ensure tags are unique
       console.log('Extracted tags:', tags);  // Debugging
     } catch (error) {
       console.error('Error fetching charts:', error);  // Debugging
@@ -39,9 +44,14 @@
     ? charts.filter(chart => chart.tags.includes(selectedTag))
     : charts;
 
+
   const handleSelectTag = (tag: string) => {
-    selectedTag = tag;
-    console.log('Selected tag:', selectedTag);  // Debugging
+    if (selectedTag === tag) {
+      selectedTag = ''; // Deselect the tag if it's already selected
+    } else {
+      selectedTag = tag;
+    }
+    console.log('Selected tag:', selectedTag);
   };
 
   onMount(fetchCharts);
@@ -49,11 +59,22 @@
 
 <main>
   <TagList {tags} {selectedTag} onSelectTag={handleSelectTag} />
-  <ChartList charts={filteredCharts} />
+  <Grid>
+    {#each filteredCharts as chart (chart.id)}
+      <div in:fade animate:flip={{ duration: 200 }} class="chart-wrapper">
+        <ChartItem {chart} />
+      </div>
+    {/each}
+  </Grid>
 </main>
 
 <style>
   main {
     padding: 40px 20px 20px 20px; /* Add top padding to avoid overlap with sticky tags */
+  }
+  .chart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
