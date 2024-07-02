@@ -3,7 +3,7 @@
         "id": "chart1",
         "title": "Economic Growth",
         "tags": ["immigration"],
-        "tags-eco": ["economics", "growth"],
+        "tags-eco": ["Jobs, work, pay & benefits"],
         "file": "/charts/C1_foreign-born-population_OECD.json"
     },
     {
@@ -26,5 +26,33 @@
         "tags": ["immigration"],
         "tags-eco": ["economics", "inflation"],
         "file": "/charts/C4_non-eu-immigration.json"
+    },
+    {
+        "id": "chart5",
+        "title": "Graduate Salary Premium",
+        "tags": ["education"],
+        "tags-eco": ["Schools, universities & training", "Jobs, work, pay & benefits"],
+        "file": "/charts/C3_graduate-salary-premiums.json"
+    },
+    {
+        "id": "chart6",
+        "title": "Planning Application Decisions",
+        "tags": ["housing"],
+        "tags-eco": [],
+        "file": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/Chart%20Packs/Planning/decisions_granted_time.json"
+    },
+    {
+        "id": "chart7",
+        "title": "Housebuilding, England and Wales",
+        "tags": ["housing"],
+        "tags-eco": [],
+        "file": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/Chart%20Packs/Housing/england_wales.json"
+    },
+    {
+        "id": "chart8",
+        "title": "Total jobs linked to oil & gas, Scotland vs UK",
+        "tags": ["energy"],
+        "tags-eco": ["Jobs, work, pay & benefits"],
+        "file": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/Chart%20Packs/Newsletters/newsletter_5/scotland/C2_energy_jobs.json"
     }
   ]

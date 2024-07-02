@@ -54,6 +54,6 @@
 
 <style>
   main {
-    padding: 20px;
+    padding: 40px 20px 20px 20px; /* Add top padding to avoid overlap with sticky tags */
   }
 </style>

@@ -102,7 +102,7 @@
       "font": "Circular Std",
       "subtitleFont": "Circular Std",
       "anchor": "start",
-      "dx": 24,
+      "frame": "group",
       "fontSize": 14,
       "subtitleFontSize": 12,
       "subtitlePadding": 4,

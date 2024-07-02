@@ -45,3 +45,11 @@ If you have state that's important to retain within a component, consider creati
 import { writable } from 'svelte/store'
 export default writable(0)
 ```
+
+
+
+
+#### Pipeline
+
+1. Auto-add titles to charts if none present
+    - Why? Charts on the ECO site typically have the title and source separate from the chart. So linking to these same chart specs will result in missing titles.

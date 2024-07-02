@@ -1,0 +1,467 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "area": {
+      "opacity": 0.3
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.7,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#676A86",
+      "subtitleColor": "#122b39E6",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "dx": 24,
+      "fontSize": 14,
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 0
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line"
+      },
+      "encoding": {
+        "color": {
+          "field": "Group",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#179fdb",
+              "#f4c245",
+              "#122b39"
+            ]
+          },
+          "type": "nominal"
+        },
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "axis": {
+            "labelExpr": "'\u00a3' + datum.value + 'k'",
+            "title": "Average annual salary"
+          },
+          "field": "Salary",
+          "scale": {
+            "domain": [
+              15,
+              50
+            ]
+          },
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 30
+      },
+      "encoding": {
+        "color": {
+          "field": "Group",
+          "type": "nominal"
+        },
+        "x": {
+          "aggregate": "max",
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "aggregate": {
+            "argmax": "Date"
+          },
+          "field": "Salary",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12
+      },
+      "encoding": {
+        "color": {
+          "field": "Group",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#179fdb",
+              "#f4c245",
+              "#122b39"
+            ]
+          },
+          "type": "nominal"
+        },
+        "text": {
+          "field": "Group",
+          "type": "nominal"
+        },
+        "x": {
+          "aggregate": "max",
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "aggregate": {
+            "argmax": "Date"
+          },
+          "field": "Salary",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "data": {
+    "name": "data-3039f403ad987761ea1f2509427d58be"
+  },
+  "width": 450,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-3039f403ad987761ea1f2509427d58be": [
+      {
+        "Date": "2007-01-01",
+        "Group": "Graduates",
+        "Salary": 30.0
+      },
+      {
+        "Date": "2008-01-01",
+        "Group": "Graduates",
+        "Salary": 31.0
+      },
+      {
+        "Date": "2009-01-01",
+        "Group": "Graduates",
+        "Salary": 31.5
+      },
+      {
+        "Date": "2010-01-01",
+        "Group": "Graduates",
+        "Salary": 32.0
+      },
+      {
+        "Date": "2011-01-01",
+        "Group": "Graduates",
+        "Salary": 32.0
+      },
+      {
+        "Date": "2012-01-01",
+        "Group": "Graduates",
+        "Salary": 32.0
+      },
+      {
+        "Date": "2013-01-01",
+        "Group": "Graduates",
+        "Salary": 32.5
+      },
+      {
+        "Date": "2014-01-01",
+        "Group": "Graduates",
+        "Salary": 32.0
+      },
+      {
+        "Date": "2015-01-01",
+        "Group": "Graduates",
+        "Salary": 32.0
+      },
+      {
+        "Date": "2016-01-01",
+        "Group": "Graduates",
+        "Salary": 32.0
+      },
+      {
+        "Date": "2017-01-01",
+        "Group": "Graduates",
+        "Salary": 33.0
+      },
+      {
+        "Date": "2018-01-01",
+        "Group": "Graduates",
+        "Salary": 34.0
+      },
+      {
+        "Date": "2019-01-01",
+        "Group": "Graduates",
+        "Salary": 34.0
+      },
+      {
+        "Date": "2020-01-01",
+        "Group": "Graduates",
+        "Salary": 34.5
+      },
+      {
+        "Date": "2021-01-01",
+        "Group": "Graduates",
+        "Salary": 36.0
+      },
+      {
+        "Date": "2022-01-01",
+        "Group": "Graduates",
+        "Salary": 38.5
+      },
+      {
+        "Date": "2007-01-01",
+        "Group": "Postgraduates",
+        "Salary": 35.5
+      },
+      {
+        "Date": "2008-01-01",
+        "Group": "Postgraduates",
+        "Salary": 36.0
+      },
+      {
+        "Date": "2009-01-01",
+        "Group": "Postgraduates",
+        "Salary": 37.0
+      },
+      {
+        "Date": "2010-01-01",
+        "Group": "Postgraduates",
+        "Salary": 37.5
+      },
+      {
+        "Date": "2011-01-01",
+        "Group": "Postgraduates",
+        "Salary": 38.0
+      },
+      {
+        "Date": "2012-01-01",
+        "Group": "Postgraduates",
+        "Salary": 38.5
+      },
+      {
+        "Date": "2013-01-01",
+        "Group": "Postgraduates",
+        "Salary": 38.0
+      },
+      {
+        "Date": "2014-01-01",
+        "Group": "Postgraduates",
+        "Salary": 39.0
+      },
+      {
+        "Date": "2015-01-01",
+        "Group": "Postgraduates",
+        "Salary": 39.5
+      },
+      {
+        "Date": "2016-01-01",
+        "Group": "Postgraduates",
+        "Salary": 38.0
+      },
+      {
+        "Date": "2017-01-01",
+        "Group": "Postgraduates",
+        "Salary": 39.0
+      },
+      {
+        "Date": "2018-01-01",
+        "Group": "Postgraduates",
+        "Salary": 40.0
+      },
+      {
+        "Date": "2019-01-01",
+        "Group": "Postgraduates",
+        "Salary": 42.0
+      },
+      {
+        "Date": "2020-01-01",
+        "Group": "Postgraduates",
+        "Salary": 41.5
+      },
+      {
+        "Date": "2021-01-01",
+        "Group": "Postgraduates",
+        "Salary": 42.0
+      },
+      {
+        "Date": "2022-01-01",
+        "Group": "Postgraduates",
+        "Salary": 45.0
+      },
+      {
+        "Date": "2007-01-01",
+        "Group": "Non-graduates",
+        "Salary": 20.0
+      },
+      {
+        "Date": "2008-01-01",
+        "Group": "Non-graduates",
+        "Salary": 20.0
+      },
+      {
+        "Date": "2009-01-01",
+        "Group": "Non-graduates",
+        "Salary": 21.0
+      },
+      {
+        "Date": "2010-01-01",
+        "Group": "Non-graduates",
+        "Salary": 21.0
+      },
+      {
+        "Date": "2011-01-01",
+        "Group": "Non-graduates",
+        "Salary": 21.0
+      },
+      {
+        "Date": "2012-01-01",
+        "Group": "Non-graduates",
+        "Salary": 21.5
+      },
+      {
+        "Date": "2013-01-01",
+        "Group": "Non-graduates",
+        "Salary": 22.0
+      },
+      {
+        "Date": "2014-01-01",
+        "Group": "Non-graduates",
+        "Salary": 22.0
+      },
+      {
+        "Date": "2015-01-01",
+        "Group": "Non-graduates",
+        "Salary": 22.0
+      },
+      {
+        "Date": "2016-01-01",
+        "Group": "Non-graduates",
+        "Salary": 22.5
+      },
+      {
+        "Date": "2017-01-01",
+        "Group": "Non-graduates",
+        "Salary": 23.0
+      },
+      {
+        "Date": "2018-01-01",
+        "Group": "Non-graduates",
+        "Salary": 24.0
+      },
+      {
+        "Date": "2019-01-01",
+        "Group": "Non-graduates",
+        "Salary": 25.0
+      },
+      {
+        "Date": "2020-01-01",
+        "Group": "Non-graduates",
+        "Salary": 25.5
+      },
+      {
+        "Date": "2021-01-01",
+        "Group": "Non-graduates",
+        "Salary": 26.0
+      },
+      {
+        "Date": "2022-01-01",
+        "Group": "Non-graduates",
+        "Salary": 27.0
+      }
+    ]
+  },
+  "height": 300
+}
